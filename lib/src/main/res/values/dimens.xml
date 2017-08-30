@@ -20,8 +20,9 @@
 
     <dimen name="lib_dialog_corner_button">5dp</dimen>
 
-    <dimen name="lib_dialog_text_menu_cancel">13sp</dimen>
-    <dimen name="lib_dialog_text_menu_item">13sp</dimen>
+    <dimen name="lib_dialog_text_menu_cancel">12sp</dimen>
+    <dimen name="lib_dialog_text_menu_cancel">14sp</dimen>
+    <dimen name="lib_dialog_text_menu_item">14sp</dimen>
     <dimen name="lib_dialog_height_menu_item">40dp</dimen>
 
 </resources>
