@@ -31,7 +31,7 @@
         style="@style/libDialog.Menu.Text.Cancel"
         android:layout_width="match_parent"
         android:layout_height="@dimen/lib_dialog_menu_height_cancel"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/lib_dialog_menu_margin_top_cancel"
         android:background="@drawable/lib_dialog_sel_bg_menu_item"
         android:gravity="center"/>
 

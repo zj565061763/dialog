@@ -15,4 +15,7 @@
     <!-- 菜单窗口 item高度 -->
     <dimen name="lib_dialog_menu_height_item">50dp</dimen>
 
+    <!-- 菜单窗口 取消顶部间距-->
+    <dimen name="lib_dialog_menu_margin_top_cancel">10dp</dimen>
+
 </resources>
