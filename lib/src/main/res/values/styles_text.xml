@@ -3,7 +3,6 @@
 
     <!-- style text title -->
     <style name="libDialog.Text.Title.Base">
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="libDialog.Text.Title" parent="libDialog.Text.Title.Base">

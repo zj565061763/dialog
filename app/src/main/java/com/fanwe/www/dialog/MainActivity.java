@@ -3,6 +3,8 @@ package com.fanwe.www.dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.fanwe.library.dialog.impl.SDDialogConfirm;
+
 public class MainActivity extends AppCompatActivity
 {
 
@@ -11,5 +13,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        new SDDialogConfirm(this).show();
     }
 }
