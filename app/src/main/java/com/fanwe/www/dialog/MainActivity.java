@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.fanwe.library.dialog.ISDDialogConfirm;
+import com.fanwe.library.dialog.ISDDialogMenu;
 import com.fanwe.library.dialog.impl.SDDialogBase;
 import com.fanwe.library.dialog.impl.SDDialogConfirm;
 import com.fanwe.library.dialog.impl.SDDialogMenu;
@@ -22,8 +23,9 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickOpenDialogConfirm(View view)
     {
-        new SDDialogConfirm(this)
-                .setTextTitle("title")
+        SDDialogConfirm dialog = new SDDialogConfirm(this);
+
+        dialog.setTextTitle("title")
                 .setTextContent("content")
                 .setTextCancel("cancel")
                 .setTextConfirm("confirm")
@@ -45,8 +47,22 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickOpenDialogMenu(View view)
     {
-        SDDialogMenu dialogMenu = new SDDialogMenu(this);
-        dialogMenu.setItems("hel", "koukouz", "zhady");
-        dialogMenu.showBottom();
+        SDDialogMenu dialog = new SDDialogMenu(this);
+
+        dialog.setItems("hel", "koukouz", "zhady")
+                .setCallback(new ISDDialogMenu.Callback()
+                {
+                    @Override
+                    public void onClickCancel(View v, SDDialogBase dialog)
+                    {
+                        Toast.makeText(getApplicationContext(), "onClickCancel", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onClickItem(View v, int index, SDDialogBase dialog)
+                    {
+                        Toast.makeText(getApplicationContext(), "onClickItem:" + index, Toast.LENGTH_SHORT).show();
+                    }
+                }).showBottom();
     }
 }

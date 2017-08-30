@@ -86,7 +86,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public ISDDialogMenu setItems(Object... objects)
+    public SDDialogMenu setItems(Object... objects)
     {
         List<Object> listObject = null;
         if (objects != null)
@@ -94,7 +94,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
             listObject = Arrays.asList(objects);
         }
         setItems(listObject);
-        return null;
+        return this;
     }
 
     @Override
