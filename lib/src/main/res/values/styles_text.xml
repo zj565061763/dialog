@@ -6,7 +6,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="libDialog.Text.title" parent="libDialog.Text.Title.Base">
+    <style name="libDialog.Text.Title" parent="libDialog.Text.Title.Base">
         <item name="android:text">@string/lib_dialog_text_title</item>
         <item name="android:textColor">@color/lib_dialog_text_title</item>
         <item name="android:textSize">@dimen/lib_dialog_text_title</item>

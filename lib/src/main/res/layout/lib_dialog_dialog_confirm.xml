@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/libDialog.Text.title"
+        style="@style/libDialog.Text.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
