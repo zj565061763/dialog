@@ -8,6 +8,7 @@
     <dimen name="lib_dialog_text_confirm">13sp</dimen>
 
     <dimen name="lib_dialog_text_button">13sp</dimen>
+
     <dimen name="lib_dialog_height_dialog_button">40dp</dimen>
 
     <dimen name="lib_dialog_margin_top_title">15dp</dimen>
@@ -18,5 +19,9 @@
     <dimen name="lib_dialog_stroke">1px</dimen>
 
     <dimen name="lib_dialog_corner_button">5dp</dimen>
+
+    <dimen name="lib_dialog_text_menu_cancel">13sp</dimen>
+    <dimen name="lib_dialog_text_menu_item">13sp</dimen>
+    <dimen name="lib_dialog_height_menu_item">40dp</dimen>
 
 </resources>

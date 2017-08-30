@@ -57,4 +57,14 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <!--<style name="libDialog.Text.Menu.Base">-->
+    <!--</style>-->
+
+    <!--<style name="libDialog.Text.Menu.Item" parent="libDialog.Text.Menu.Base">-->
+        <!--<item name="android:textColor">@color/lib_dialog_menu_text_item</item>-->
+        <!--<item name="android:textSize">@dimen/lib_dialog_menu_text_item</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:ellipsize">end</item>-->
+    <!--</style>-->
+
 </resources>

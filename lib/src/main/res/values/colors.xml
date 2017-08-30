@@ -14,4 +14,7 @@
     <color name="lib_dialog_bg_button_normal">#FFFFFF</color>
     <color name="lib_dialog_bg_button_pressed">#e5e5e5</color>
 
+    <color name="lib_dialog_text_menu_cancel">#999999</color>
+    <color name="lib_dialog_text_menu_item">#666666</color>
+
 </resources>
