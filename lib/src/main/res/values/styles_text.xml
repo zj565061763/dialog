@@ -28,7 +28,9 @@
     </style>
 
     <style name="libDialog.Text.Cancel" parent="libDialog.Text.Cancel.Base">
+        <item name="android:text">@string/lib_dialog_text_cancel</item>
         <item name="android:textColor">@color/lib_dialog_text_cancel</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/lib_dialog_text_cancel</item>
         <item name="android:ellipsize">end</item>
     </style>
@@ -39,6 +41,8 @@
 
     <style name="libDialog.Text.Confirm" parent="libDialog.Text.Confirm.Base">
         <item name="android:textColor">@color/lib_dialog_text_confirm</item>
+        <item name="android:text">@string/lib_dialog_text_confirm</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/lib_dialog_text_confirm</item>
         <item name="android:ellipsize">end</item>
     </style>
@@ -50,6 +54,7 @@
     <style name="libDialog.Text.Button" parent="libDialog.Text.Button.Base">
         <item name="android:textColor">@color/lib_dialog_text_button</item>
         <item name="android:textSize">@dimen/lib_dialog_text_button</item>
+        <item name="android:gravity">center</item>
         <item name="android:ellipsize">end</item>
     </style>
 
