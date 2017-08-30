@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Library</string>
+
+    <string name="lib_dialog_confirm_text_title">提示</string>
+    <string name="lib_dialog_confirm_text_cancel">取消</string>
+    <string name="lib_dialog_confirm_text_confirm">确定</string>
+
+</resources>

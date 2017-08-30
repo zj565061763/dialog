@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/libDialog.Text.Title"
+        style="@style/libDialog.Confirm.Text.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/tv_content"
-            style="@style/libDialog.Text.Content"
+            style="@style/libDialog.Confirm.Text.Content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/tv_cancel"
-            style="@style/libDialog.Text.Cancel"
+            style="@style/libDialog.Confirm.Text.Cancel"
             android:layout_width="0dp"
             android:layout_height="@dimen/lib_dialog_height_dialog_button"
             android:layout_weight="1"
@@ -55,7 +55,7 @@
 
         <TextView
             android:id="@+id/tv_confirm"
-            style="@style/libDialog.Text.Confirm"
+            style="@style/libDialog.Confirm.Text.Confirm"
             android:layout_width="0dp"
             android:layout_height="@dimen/lib_dialog_height_dialog_button"
             android:layout_weight="1"
