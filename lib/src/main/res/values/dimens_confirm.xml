@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 确认窗口 标题字体大小 -->
+    <dimen name="lib_dialog_confirm_text_title">16sp</dimen>
+    <!-- 确认窗口 内容字体大小 -->
+    <dimen name="lib_dialog_confirm_text_content">12sp</dimen>
+    <!-- 确认窗口 取消字体大小 -->
+    <dimen name="lib_dialog_confirm_text_cancel">13sp</dimen>
+    <!-- 确认窗口 确认字体大小 -->
+    <dimen name="lib_dialog_confirm_text_confirm">13sp</dimen>
+
+    <!-- 确认窗口 标题顶部间距-->
+    <dimen name="lib_dialog_confirm_margin_top_title">15dp</dimen>
+    <!-- 确认窗口 内容顶部间距 -->
+    <dimen name="lib_dialog_confirm_margin_top_content">15dp</dimen>
+    <!-- 确认窗口 内容底部间距 -->
+    <dimen name="lib_dialog_confirm_margin_bottom_content">15dp</dimen>
+
+</resources>
