@@ -57,7 +57,7 @@ dialog.setTextMsg("加载中...").show();
 
 ## ISDDialogBase
 ISDDialogBase是所有的SDDialog的基类实现的接口
-```
+```java
 public interface ISDDialogBase
 {
 
