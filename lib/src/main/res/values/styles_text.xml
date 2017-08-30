@@ -72,6 +72,7 @@
     </style>
 
     <style name="libDialog.Text.Menu.Cancel" parent="libDialog.Text.Menu.Cancel.Base">
+        <item name="android:text">@string/lib_dialog_text_menu_cancel</item>
         <item name="android:textColor">@color/lib_dialog_text_menu_cancel</item>
         <item name="android:textSize">@dimen/lib_dialog_text_menu_cancel</item>
         <item name="android:ellipsize">end</item>

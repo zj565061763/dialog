@@ -21,16 +21,18 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#FFFFFF">
+        android:background="#FFFFFF"
+        android:divider="@drawable/lib_dialog_stroke"
+        android:dividerHeight="@dimen/lib_dialog_stroke">
     </ListView>
 
     <TextView
         android:id="@+id/tv_cancel"
+        style="@style/libDialog.Text.Menu.Cancel"
         android:layout_width="match_parent"
         android:layout_height="@dimen/lib_dialog_height_menu_item"
         android:layout_marginTop="10dp"
         android:background="@drawable/lib_dialog_sel_bg_menu_item"
-        android:gravity="center"
-        android:text="取消"/>
+        android:gravity="center"/>
 
 </LinearLayout>

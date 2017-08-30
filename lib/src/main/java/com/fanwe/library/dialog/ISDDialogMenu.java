@@ -37,6 +37,12 @@ public interface ISDDialogMenu
      */
     ISDDialogMenu setCallback(Callback callback);
 
+    /**
+     * 设置列表数据
+     *
+     * @param listModel
+     * @return
+     */
     ISDDialogMenu setItems(List<Object> listModel);
 
     /**

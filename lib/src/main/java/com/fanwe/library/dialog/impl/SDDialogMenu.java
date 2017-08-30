@@ -167,8 +167,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     @Override
     public int getDefaultPadding()
     {
-        int value = (int) (getContext().getResources().getDisplayMetrics().density * 10);
-        return value;
+        return 0;
     }
 
     @Override

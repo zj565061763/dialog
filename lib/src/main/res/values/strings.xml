@@ -5,4 +5,6 @@
     <string name="lib_dialog_text_cancel">取消</string>
     <string name="lib_dialog_text_confirm">确定</string>
 
+    <string name="lib_dialog_text_menu_cancel">取消</string>
+
 </resources>
