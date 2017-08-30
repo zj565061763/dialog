@@ -40,10 +40,18 @@ public interface ISDDialogMenu
     /**
      * 设置列表数据
      *
-     * @param listModel
+     * @param objects
      * @return
      */
-    ISDDialogMenu setItems(List<Object> listModel);
+    ISDDialogMenu setItems(Object... objects);
+
+    /**
+     * 设置列表数据
+     *
+     * @param listObject
+     * @return
+     */
+    ISDDialogMenu setItems(List<Object> listObject);
 
     /**
      * 设置适配器

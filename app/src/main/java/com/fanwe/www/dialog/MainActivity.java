@@ -7,8 +7,6 @@ import android.view.View;
 import com.fanwe.library.dialog.impl.SDDialogConfirm;
 import com.fanwe.library.dialog.impl.SDDialogMenu;
 
-import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity
 {
 
@@ -27,8 +25,7 @@ public class MainActivity extends AppCompatActivity
     public void onClickOpenDialogMenu(View view)
     {
         SDDialogMenu dialogMenu = new SDDialogMenu(this);
-        Object[] arrItem = new String[]{"hel", "koukouz", "zhady"};
-        dialogMenu.setItems(Arrays.asList(arrItem));
+        dialogMenu.setItems("hel", "koukouz", "zhady");
         dialogMenu.showBottom();
     }
 }

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.fanwe.library.dialog.ISDDialogMenu;
 import com.fanwe.library.dialog.R;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -85,9 +86,21 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public SDDialogMenu setItems(List<Object> listModel)
+    public ISDDialogMenu setItems(Object... objects)
     {
-        mListModel = listModel;
+        List<Object> listObject = null;
+        if (objects != null)
+        {
+            listObject = Arrays.asList(objects);
+        }
+        setItems(listObject);
+        return null;
+    }
+
+    @Override
+    public SDDialogMenu setItems(List<Object> listObject)
+    {
+        mListModel = listObject;
         setAdapter(mInternalAdapter);
         return this;
     }
