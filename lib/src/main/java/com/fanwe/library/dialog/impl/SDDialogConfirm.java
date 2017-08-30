@@ -2,47 +2,83 @@ package com.fanwe.library.dialog.impl;
 
 import android.app.Activity;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.fanwe.library.dialog.ISDDialogConfirm;
 import com.fanwe.library.dialog.R;
 
 /**
  * 带标题，内容，确定按钮和取消按钮的窗口
- *
- * @author js02
  */
-public class SDDialogConfirm extends SDDialogCustom
+public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
 {
+    public TextView tv_title;
 
+    public FrameLayout fl_content;
     public TextView tv_content;
+
+    public TextView tv_cancel;
+    public TextView tv_confirm;
+
+    private Callback mCallback;
 
     public SDDialogConfirm(Activity activity)
     {
         super(activity);
+        init();
+    }
+
+    private void init()
+    {
+        setContentView(R.layout.lib_dialog_dialog_confirm);
+        tv_title = (TextView) findViewById(R.id.tv_title);
+
+        fl_content = (FrameLayout) findViewById(R.id.fl_content);
+        tv_content = (TextView) findViewById(R.id.tv_content);
+
+        tv_cancel = (TextView) findViewById(R.id.tv_cancel);
+        tv_confirm = (TextView) findViewById(R.id.tv_confirm);
+
+        tv_confirm.setOnClickListener(this);
+        tv_cancel.setOnClickListener(this);
     }
 
     @Override
-    protected void init()
+    public SDDialogConfirm setCustomView(int layoutId)
     {
-        super.init();
-
-        setCustomView(R.layout.dialog_confirm);
-        tv_content = (TextView) findViewById(R.id.dialog_confirm_tv_content);
-
+        fl_content.removeAllViews();
+        LayoutInflater.from(getContext()).inflate(layoutId, fl_content, true);
+        return this;
     }
 
-    public SDDialogConfirm setTextGravity(int gravity)
+    @Override
+    public SDDialogConfirm setCustomView(View view)
     {
-        if (tv_content.getLayoutParams() instanceof LinearLayout.LayoutParams)
+        fl_content.removeAllViews();
+        fl_content.addView(view);
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setCallback(Callback callback)
+    {
+        mCallback = callback;
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextTitle(String text)
+    {
+        if (TextUtils.isEmpty(text))
         {
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tv_content.getLayoutParams();
-            if (params.gravity != gravity)
-            {
-                params.gravity = gravity;
-                tv_content.setLayoutParams(params);
-            }
+            tv_title.setVisibility(View.GONE);
+        } else
+        {
+            tv_title.setVisibility(View.VISIBLE);
+            tv_title.setText(text);
         }
         return this;
     }
@@ -58,5 +94,51 @@ public class SDDialogConfirm extends SDDialogCustom
             tv_content.setText(text);
         }
         return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextCancel(String text)
+    {
+        if (TextUtils.isEmpty(text))
+        {
+            tv_cancel.setVisibility(View.GONE);
+        } else
+        {
+            tv_cancel.setVisibility(View.VISIBLE);
+            tv_cancel.setText(text);
+        }
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextConfirm(String text)
+    {
+        if (TextUtils.isEmpty(text))
+        {
+            tv_confirm.setVisibility(View.GONE);
+        } else
+        {
+            tv_confirm.setVisibility(View.VISIBLE);
+            tv_confirm.setText(text);
+        }
+        return this;
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        super.onClick(v);
+        if (mCallback != null)
+        {
+            if (v == tv_cancel)
+            {
+                mCallback.onClickCancel(v, this);
+                dismissAfterClickIfNeed();
+            } else if (v == tv_confirm)
+            {
+                mCallback.onClickConfirm(v, this);
+                dismissAfterClickIfNeed();
+            }
+        }
     }
 }
