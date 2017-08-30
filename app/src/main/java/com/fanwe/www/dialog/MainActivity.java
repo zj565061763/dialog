@@ -10,6 +10,7 @@ import com.fanwe.library.dialog.ISDDialogMenu;
 import com.fanwe.library.dialog.impl.SDDialogBase;
 import com.fanwe.library.dialog.impl.SDDialogConfirm;
 import com.fanwe.library.dialog.impl.SDDialogMenu;
+import com.fanwe.library.dialog.impl.SDDialogProgress;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -62,5 +63,13 @@ public class MainActivity extends AppCompatActivity
                         Toast.makeText(getApplicationContext(), "onClickItem:" + index, Toast.LENGTH_SHORT).show();
                     }
                 }).showBottom();
+    }
+
+    public void onClickOpenDialogProgress(View view)
+    {
+        SDDialogProgress dialog = new SDDialogProgress(this);
+
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setTextMsg("加载中...").show();
     }
 }

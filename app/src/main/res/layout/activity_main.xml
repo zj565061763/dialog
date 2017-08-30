@@ -9,12 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickOpenDialogConfirm"
-        android:text="dialog_confirm"/>
+        android:text="确认窗口"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickOpenDialogMenu"
-        android:text="dialog_menu"/>
+        android:text="菜单窗口"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickOpenDialogProgress"
+        android:text="加载中窗口"/>
 
 </LinearLayout>
