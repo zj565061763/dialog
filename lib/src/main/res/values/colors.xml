@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 确认窗口 标题 -->
     <color name="lib_dialog_confirm_text_title">#333333</color>
+    <!-- 确认窗口 内容 -->
     <color name="lib_dialog_confirm_text_content">#666666</color>
+    <!-- 确认窗口 取消 -->
+    <color name="lib_dialog_confirm_text_cancel">#999999</color>
+    <!-- 确认窗口 确认 -->
+    <color name="lib_dialog_confirm_text_confirm">#666666</color>
 
-    <color name="lib_dialog_text_cancel">#999999</color>
-    <color name="lib_dialog_text_confirm">#666666</color>
+    <!-- 菜单窗口 标题 -->
+    <color name="lib_dialog_text_menu_title">#999999</color>
+    <!-- 菜单窗口 取消 -->
+    <color name="lib_dialog_text_menu_cancel">#666666</color>
+    <!-- 菜单窗口 item -->
+    <color name="lib_dialog_text_menu_item">#333333</color>
 
-    <color name="lib_dialog_text_button">#666666</color>
-
+    <!-- 分割线 -->
     <color name="lib_dialog_stroke">#e7e7f1</color>
 
+    <!-- 按钮正常颜色 -->
     <color name="lib_dialog_bg_button_normal">#FFFFFF</color>
+    <!-- 按钮按下颜色 -->
     <color name="lib_dialog_bg_button_pressed">#e5e5e5</color>
-
-    <color name="lib_dialog_text_menu_title">#999999</color>
-    <color name="lib_dialog_text_menu_cancel">#666666</color>
-    <color name="lib_dialog_text_menu_item">#333333</color>
 
 </resources>
