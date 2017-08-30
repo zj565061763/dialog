@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity
     public void onClickOpenDialogConfirm(View view)
     {
         SDDialogConfirm dialog = new SDDialogConfirm(this);
-
         dialog.setTextTitle("title")
                 .setTextContent("content")
                 .setTextCancel("cancel")
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity
     public void onClickOpenDialogMenu(View view)
     {
         SDDialogMenu dialog = new SDDialogMenu(this);
-
         dialog.setItems("hel", "koukouz", "zhady")
                 .setCallback(new ISDDialogMenu.Callback()
                 {
