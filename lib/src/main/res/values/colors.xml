@@ -9,4 +9,6 @@
 
     <color name="lib_dialog_text_button">#666666</color>
 
+    <color name="lib_dialog_stroke">#e7e7f1</color>
+
 </resources>

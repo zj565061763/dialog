@@ -10,9 +10,11 @@
     <dimen name="lib_dialog_text_button">13sp</dimen>
     <dimen name="lib_dialog_height_dialog_button">40dp</dimen>
 
-    <dimen name="lib_dialog_margin_top_title">25dp</dimen>
+    <dimen name="lib_dialog_margin_top_title">15dp</dimen>
 
-    <dimen name="lib_dialog_margin_top_content">25dp</dimen>
-    <dimen name="lib_dialog_margin_bottom_content">25dp</dimen>
+    <dimen name="lib_dialog_margin_top_content">15dp</dimen>
+    <dimen name="lib_dialog_margin_bottom_content">15dp</dimen>
+
+    <dimen name="lib_dialog_stroke">1px</dimen>
 
 </resources>

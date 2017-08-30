@@ -33,6 +33,11 @@
 
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lib_dialog_stroke"
+        android:background="@color/lib_dialog_stroke"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
