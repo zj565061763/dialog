@@ -17,4 +17,6 @@
 
     <dimen name="lib_dialog_stroke">1px</dimen>
 
+    <dimen name="lib_dialog_corner_button">5dp</dimen>
+
 </resources>

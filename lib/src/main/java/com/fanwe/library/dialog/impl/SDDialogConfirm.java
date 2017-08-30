@@ -128,17 +128,20 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     public void onClick(View v)
     {
         super.onClick(v);
-        if (mCallback != null)
+        if (v == tv_cancel)
         {
-            if (v == tv_cancel)
+            if (mCallback != null)
             {
                 mCallback.onClickCancel(v, this);
-                dismissAfterClickIfNeed();
-            } else if (v == tv_confirm)
+            }
+            dismissAfterClickIfNeed();
+        } else if (v == tv_confirm)
+        {
+            if (mCallback != null)
             {
                 mCallback.onClickConfirm(v, this);
-                dismissAfterClickIfNeed();
             }
+            dismissAfterClickIfNeed();
         }
     }
 }

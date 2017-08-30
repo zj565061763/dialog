@@ -11,4 +11,7 @@
 
     <color name="lib_dialog_stroke">#e7e7f1</color>
 
+    <color name="lib_dialog_bg_button_normal">#FFFFFF</color>
+    <color name="lib_dialog_bg_button_pressed">#e5e5e5</color>
+
 </resources>

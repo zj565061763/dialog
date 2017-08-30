@@ -48,14 +48,16 @@
             style="@style/libDialog.Text.Cancel"
             android:layout_width="0dp"
             android:layout_height="@dimen/lib_dialog_height_dialog_button"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/lib_dialog_sel_bg_button_bottom_left"/>
 
         <TextView
             android:id="@+id/tv_confirm"
             style="@style/libDialog.Text.Confirm"
             android:layout_width="0dp"
             android:layout_height="@dimen/lib_dialog_height_dialog_button"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/lib_dialog_sel_bg_button_bottom_right"/>
     </LinearLayout>
 
 </LinearLayout>
