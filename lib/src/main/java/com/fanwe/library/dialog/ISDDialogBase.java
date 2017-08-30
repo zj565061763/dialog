@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 public interface ISDDialogBase
 {
-
     /**
      * 返回内容View
      *
@@ -175,5 +174,4 @@ public interface ISDDialogBase
      * @return
      */
     ISDDialogBase stopDismissRunnable();
-
 }
