@@ -45,3 +45,12 @@ dialog.setItems("hel", "koukouz", "zhady") //设置要显示的内容
             }
         }).showBottom(); //显示在屏幕底部
 ```
+
+## SDDialogProgress
+![](http://thumbsnap.com/i/IQwIGyF7.gif?0830)<br>
+```java
+SDDialogProgress dialog = new SDDialogProgress(this);
+
+dialog.setCanceledOnTouchOutside(true);
+dialog.setTextMsg("加载中...").show();
+```
