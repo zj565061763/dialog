@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="lib_dialog_text_title">16sp</dimen>
+    <dimen name="lib_dialog_text_content">14sp</dimen>
+    <dimen name="lib_dialog_text_cancel">12sp</dimen>
+    <dimen name="lib_dialog_text_confirm">12sp</dimen>
+    <dimen name="lib_dialog_text_button">12sp</dimen>
+
+    <dimen name="lib_dialog_height_dialog_button">40dp</dimen>
+
+
+</resources>

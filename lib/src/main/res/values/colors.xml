@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lib_dialog_text_title">#333333</color>
+    <color name="lib_dialog_text_content">#666666</color>
+    <color name="lib_dialog_text_cancel">#999999</color>
+    <color name="lib_dialog_text_confirm">#666666</color>
+    <color name="lib_dialog_text_button">#666666</color>
+
+</resources>
