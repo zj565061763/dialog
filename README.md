@@ -213,20 +213,19 @@ public interface ISDDialogBase
     ISDDialogBase showBottom();
 
     /**
-     * 开始延迟消失任务
+     * 延迟多久后关闭窗口
      *
-     * @param delay
+     * @param delay （毫秒）
      * @return
      */
     ISDDialogBase startDismissRunnable(long delay);
 
     /**
-     * 停止延迟消失任务
+     * 停止延迟关闭任务
      *
      * @return
      */
     ISDDialogBase stopDismissRunnable();
-
 }
 
 ```
