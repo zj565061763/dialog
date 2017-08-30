@@ -44,6 +44,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
 
         tv_cancel.setOnClickListener(this);
         setTextTitle(null);
+        setCanceledOnTouchOutside(true);
     }
 
     //---------- ISDDialogMenu implements start ----------
