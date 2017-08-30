@@ -2,7 +2,9 @@ package com.fanwe.library.dialog.impl;
 
 import android.app.Activity;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
@@ -22,6 +24,8 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     public TextView tv_title;
     public TextView tv_cancel;
     public ListView lv_content;
+
+    private List<Object> mListModel;
 
     private Callback mCallback;
 
@@ -82,10 +86,8 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     @Override
     public SDDialogMenu setItems(List<Object> listModel)
     {
-        if (listModel != null && listModel.size() > 0)
-        {
-
-        }
+        mListModel = listModel;
+        setAdapter(mInternalAdapter);
         return this;
     }
 
@@ -110,13 +112,64 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
 
     //---------- ISDDialogMenu implements end ----------
 
+    private BaseAdapter mInternalAdapter = new BaseAdapter()
+    {
+        @Override
+        public int getCount()
+        {
+            if (mListModel != null && !mListModel.isEmpty())
+            {
+                return mListModel.size();
+            }
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position)
+        {
+            return getModel(position);
+        }
+
+        @Override
+        public long getItemId(int position)
+        {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            if (convertView == null)
+            {
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.lib_dialog_item_dialog_menu, parent, false);
+            }
+            TextView textView = (TextView) convertView.findViewById(R.id.tv_content);
+            Object object = getItem(position);
+            if (object != null)
+            {
+                textView.setText(String.valueOf(object));
+            }
+            return convertView;
+        }
+    };
+
+    private Object getModel(int position)
+    {
+        if (mListModel != null && !mListModel.isEmpty()
+                && position >= 0
+                && position < mListModel.size())
+        {
+            return mListModel.get(position);
+        }
+        return null;
+    }
+
     @Override
     public int getDefaultPadding()
     {
         int value = (int) (getContext().getResources().getDisplayMetrics().density * 10);
         return value;
     }
-
 
     @Override
     public void onClick(View v)

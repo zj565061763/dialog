@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/tv_content"
+        style="@style/libDialog.Text.Menu.Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
