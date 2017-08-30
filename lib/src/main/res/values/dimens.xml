@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- 菜单窗口 标题字体大小 -->
-    <dimen name="lib_dialog_text_menu_title">12sp</dimen>
-    <!-- 菜单窗口 取消字体大小 -->
-    <dimen name="lib_dialog_text_menu_cancel">14sp</dimen>
-    <!-- 菜单窗口 item字体大小 -->
-    <dimen name="lib_dialog_text_menu_item">14sp</dimen>
-
-    <!-- 菜单窗口 标题高度 -->
-    <dimen name="lib_dialog_height_menu_title">50dp</dimen>
-    <!-- 菜单窗口 取消高度 -->
-    <dimen name="lib_dialog_height_menu_cancel">50dp</dimen>
-    <!-- 菜单窗口 item高度 -->
-    <dimen name="lib_dialog_height_menu_item">50dp</dimen>
-
     <!-- 按钮高度 -->
     <dimen name="lib_dialog_height_dialog_button">40dp</dimen>
 
@@ -22,6 +8,5 @@
     <dimen name="lib_dialog_stroke">1px</dimen>
     <!-- 圆角 -->
     <dimen name="lib_dialog_corner_button">5dp</dimen>
-
 
 </resources>
