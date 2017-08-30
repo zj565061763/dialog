@@ -2,10 +2,10 @@
 <resources>
 
     <!-- 菜单窗口 标题 -->
-    <color name="lib_dialog_text_menu_title">#999999</color>
+    <color name="lib_dialog_menu_text_title">#999999</color>
     <!-- 菜单窗口 取消 -->
-    <color name="lib_dialog_text_menu_cancel">#666666</color>
+    <color name="lib_dialog_menu_text_cancel">#666666</color>
     <!-- 菜单窗口 item -->
-    <color name="lib_dialog_text_menu_item">#333333</color>
+    <color name="lib_dialog_menu_text_item">#333333</color>
 
 </resources>
