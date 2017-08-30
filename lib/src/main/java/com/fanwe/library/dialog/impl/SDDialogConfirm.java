@@ -107,6 +107,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
             tv_cancel.setVisibility(View.VISIBLE);
             tv_cancel.setText(text);
         }
+        changeBottomButtonIfNeed();
         return this;
     }
 
@@ -121,6 +122,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
             tv_confirm.setVisibility(View.VISIBLE);
             tv_confirm.setText(text);
         }
+        changeBottomButtonIfNeed();
         return this;
     }
 
@@ -142,6 +144,21 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
                 mCallback.onClickConfirm(v, this);
             }
             dismissAfterClickIfNeed();
+        }
+    }
+
+    protected void changeBottomButtonIfNeed()
+    {
+        if (tv_cancel.getVisibility() == View.VISIBLE && tv_confirm.getVisibility() == View.VISIBLE)
+        {
+            setBackgroundDrawable(tv_cancel, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_left));
+            setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_right));
+        } else if (tv_cancel.getVisibility() == View.VISIBLE)
+        {
+            setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_single));
+        } else if (tv_confirm.getVisibility() == View.VISIBLE)
+        {
+            setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_single));
         }
     }
 }

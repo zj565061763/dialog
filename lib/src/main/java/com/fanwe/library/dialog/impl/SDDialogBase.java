@@ -3,6 +3,7 @@ package com.fanwe.library.dialog.impl;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -348,5 +349,19 @@ public class SDDialogBase extends Dialog implements
         {
             e.printStackTrace();
         }
+    }
+
+    protected static void setBackgroundDrawable(View view, Drawable drawable)
+    {
+        if (view == null)
+        {
+            return;
+        }
+        int paddingLeft = view.getPaddingLeft();
+        int paddingTop = view.getPaddingTop();
+        int paddingRight = view.getPaddingRight();
+        int paddingBottom = view.getPaddingBottom();
+        view.setBackgroundDrawable(drawable);
+        view.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
     }
 }
