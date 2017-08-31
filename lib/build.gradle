@@ -33,7 +33,7 @@ publish {
     artifactId = 'dialog'
     publishVersion = '1.0.1'
     desc = 'fanwe android dialog library'
-    website = 'https://github.com/zj565061763/Dialog'
+    website = 'https://github.com/zj565061763/dialog'
 }
 
 tasks.withType(Javadoc) {
