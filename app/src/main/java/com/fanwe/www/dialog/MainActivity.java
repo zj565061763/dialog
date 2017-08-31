@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity
     public void onClickOpenDialogMenu(View view)
     {
         SDDialogMenu dialog = new SDDialogMenu(this);
-        dialog.setItems("hel", "koukouz", "zhady")
+        dialog.setTextTitle("请选择");
+        dialog.setItems("LEWLY", "koukouz", "zhady", "NAPZ", "shNz", "heL^_x")
                 .setCallback(new ISDDialogMenu.Callback()
                 {
                     @Override

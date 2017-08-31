@@ -9,11 +9,11 @@
     <dimen name="lib_dialog_menu_text_item">14sp</dimen>
 
     <!-- 菜单窗口 标题高度 -->
-    <dimen name="lib_dialog_menu_height_title">50dp</dimen>
+    <dimen name="lib_dialog_menu_height_title">40dp</dimen>
     <!-- 菜单窗口 取消高度 -->
-    <dimen name="lib_dialog_menu_height_cancel">50dp</dimen>
+    <dimen name="lib_dialog_menu_height_cancel">40dp</dimen>
     <!-- 菜单窗口 item高度 -->
-    <dimen name="lib_dialog_menu_height_item">50dp</dimen>
+    <dimen name="lib_dialog_menu_height_item">40dp</dimen>
 
     <!-- 菜单窗口 取消顶部间距-->
     <dimen name="lib_dialog_menu_margin_top_cancel">10dp</dimen>
