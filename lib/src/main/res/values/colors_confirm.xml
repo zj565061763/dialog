@@ -4,7 +4,7 @@
     <!-- 确认窗口 标题 -->
     <color name="lib_dialog_confirm_text_title">#333333</color>
     <!-- 确认窗口 内容 -->
-    <color name="lib_dialog_confirm_text_content">#666666</color>
+    <color name="lib_dialog_confirm_text_content">#999999</color>
     <!-- 确认窗口 取消 -->
     <color name="lib_dialog_confirm_text_cancel">#999999</color>
     <!-- 确认窗口 确认 -->
