@@ -75,8 +75,8 @@ public interface ISDDialogMenu
 
     interface Callback
     {
-        void onClickCancel(View v, SDDialogBase dialog);
-
         void onClickItem(View v, int index, SDDialogBase dialog);
+
+        void onClickCancel(View v, SDDialogBase dialog);
     }
 }

@@ -35,8 +35,8 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     public FrameLayout fl_content;
     public TextView tv_content;
 
-    public TextView tv_cancel;
     public TextView tv_confirm;
+    public TextView tv_cancel;
 
     private Callback mCallback;
 
@@ -54,8 +54,8 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
         fl_content = (FrameLayout) findViewById(R.id.fl_content);
         tv_content = (TextView) findViewById(R.id.tv_content);
 
-        tv_cancel = (TextView) findViewById(R.id.tv_cancel);
         tv_confirm = (TextView) findViewById(R.id.tv_confirm);
+        tv_cancel = (TextView) findViewById(R.id.tv_cancel);
 
         tv_confirm.setOnClickListener(this);
         tv_cancel.setOnClickListener(this);
@@ -112,21 +112,6 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setTextCancel(String text)
-    {
-        if (TextUtils.isEmpty(text))
-        {
-            tv_cancel.setVisibility(View.GONE);
-        } else
-        {
-            tv_cancel.setVisibility(View.VISIBLE);
-            tv_cancel.setText(text);
-        }
-        changeBottomButtonIfNeed();
-        return this;
-    }
-
-    @Override
     public SDDialogConfirm setTextConfirm(String text)
     {
         if (TextUtils.isEmpty(text))
@@ -142,21 +127,64 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
+    public SDDialogConfirm setTextCancel(String text)
+    {
+        if (TextUtils.isEmpty(text))
+        {
+            tv_cancel.setVisibility(View.GONE);
+        } else
+        {
+            tv_cancel.setVisibility(View.VISIBLE);
+            tv_cancel.setText(text);
+        }
+        changeBottomButtonIfNeed();
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextColorTitle(int color)
+    {
+        tv_title.setTextColor(color);
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextColorContent(int color)
+    {
+        tv_content.setTextColor(color);
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextColorConfirm(int color)
+    {
+        tv_confirm.setTextColor(color);
+        return this;
+    }
+
+    @Override
+    public SDDialogConfirm setTextColorCancel(int color)
+    {
+        tv_cancel.setTextColor(color);
+        return this;
+    }
+
+    @Override
     public void onClick(View v)
     {
         super.onClick(v);
-        if (v == tv_cancel)
-        {
-            if (mCallback != null)
-            {
-                mCallback.onClickCancel(v, this);
-            }
-            dismissAfterClickIfNeed();
-        } else if (v == tv_confirm)
+        if (v == tv_confirm)
         {
             if (mCallback != null)
             {
                 mCallback.onClickConfirm(v, this);
+            }
+            dismissAfterClickIfNeed();
+        } else if (v == tv_cancel)
+        {
+            if (mCallback != null)
+            {
+                mCallback.onClickCancel(v, this);
             }
             dismissAfterClickIfNeed();
         }
