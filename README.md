@@ -1,5 +1,5 @@
 ## Gradle
-`compile 'com.fanwe.android:dialog:1.0.3'`
+`compile 'com.fanwe.android:dialog:1.0.4'`
 
 ## SDDialogConfirm
 ![](http://thumbsnap.com/i/zWa4uIPF.gif?0830)<br>
