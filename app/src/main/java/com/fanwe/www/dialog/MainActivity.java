@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity
                 }).show();
     }
 
+    public void onClickOpenDialogCustomConfirm(View view)
+    {
+        CustomDialog dialog = new CustomDialog(this);
+        dialog.show();
+    }
+
     public void onClickOpenDialogMenu(View view)
     {
         SDDialogMenu dialog = new SDDialogMenu(this);

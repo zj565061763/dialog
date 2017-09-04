@@ -14,6 +14,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClickOpenDialogCustomConfirm"
+        android:text="自定义内容确认窗口"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="onClickOpenDialogMenu"
         android:text="菜单窗口"/>
 
