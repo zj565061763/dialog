@@ -19,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="@dimen/lib_dialog_confirm_margin_bottom_content"
+        android:layout_marginLeft="@dimen/lib_dialog_confirm_margin_left_content"
+        android:layout_marginRight="@dimen/lib_dialog_confirm_margin_right_content"
         android:layout_marginTop="@dimen/lib_dialog_confirm_margin_top_content"
         android:layout_weight="1"
         android:orientation="vertical">
