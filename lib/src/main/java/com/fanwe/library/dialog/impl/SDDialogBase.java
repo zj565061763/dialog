@@ -194,29 +194,26 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase showTop()
+    public void showTop()
     {
         setGrativity(Gravity.TOP);
         setAnimations(R.style.libDialog_Anim_SlidingTopTop);
         show();
-        return this;
     }
 
     @Override
-    public SDDialogBase showCenter()
+    public void showCenter()
     {
         setGrativity(Gravity.CENTER);
         show();
-        return this;
     }
 
     @Override
-    public SDDialogBase showBottom()
+    public void showBottom()
     {
         setGrativity(Gravity.BOTTOM);
         setAnimations(R.style.libDialog_Anim_SlidingBottomBottom);
         show();
-        return this;
     }
 
     @Override
