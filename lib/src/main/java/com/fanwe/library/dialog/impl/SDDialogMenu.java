@@ -116,7 +116,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     public SDDialogMenu setItems(List<Object> listObject)
     {
         mListModel = listObject;
-        setAdapter(mInternalAdapter);
+        setAdapter(getAdapter());
         return this;
     }
 
@@ -140,6 +140,11 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     //---------- ISDDialogMenu implements end ----------
+
+    protected BaseAdapter getAdapter()
+    {
+        return mInternalAdapter;
+    }
 
     private BaseAdapter mInternalAdapter = new BaseAdapter()
     {
