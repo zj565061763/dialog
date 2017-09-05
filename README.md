@@ -63,7 +63,6 @@ ISDDialogBase是所有的SDDialog的基类实现的接口
 ```java
 public interface ISDDialogBase
 {
-
     /**
      * 返回内容View
      *
@@ -196,24 +195,18 @@ public interface ISDDialogBase
 
     /**
      * 显示顶部
-     *
-     * @return
      */
-    ISDDialogBase showTop();
+    void showTop();
 
     /**
      * 显示中央
-     *
-     * @return
      */
-    ISDDialogBase showCenter();
+    void showCenter();
 
     /**
      * 显示底部
-     *
-     * @return
      */
-    ISDDialogBase showBottom();
+    void showBottom();
 
     /**
      * 延迟多久后关闭窗口
