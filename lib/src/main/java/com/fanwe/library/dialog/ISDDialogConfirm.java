@@ -62,20 +62,20 @@ public interface ISDDialogConfirm
     ISDDialogConfirm setTextContent(String text);
 
     /**
-     * 设置确定按钮文字
-     *
-     * @param text
-     * @return
-     */
-    ISDDialogConfirm setTextConfirm(String text);
-
-    /**
      * 设置取消按钮文字
      *
      * @param text
      * @return
      */
     ISDDialogConfirm setTextCancel(String text);
+
+    /**
+     * 设置确定按钮文字
+     *
+     * @param text
+     * @return
+     */
+    ISDDialogConfirm setTextConfirm(String text);
 
     /**
      * 设置标题文字颜色
@@ -94,14 +94,6 @@ public interface ISDDialogConfirm
     ISDDialogConfirm setTextColorContent(int color);
 
     /**
-     * 设置确认文字颜色
-     *
-     * @param color
-     * @return
-     */
-    ISDDialogConfirm setTextColorConfirm(int color);
-
-    /**
      * 设置取消文字颜色
      *
      * @param color
@@ -109,10 +101,18 @@ public interface ISDDialogConfirm
      */
     ISDDialogConfirm setTextColorCancel(int color);
 
+    /**
+     * 设置确认文字颜色
+     *
+     * @param color
+     * @return
+     */
+    ISDDialogConfirm setTextColorConfirm(int color);
+
     interface Callback
     {
-        void onClickConfirm(View v, SDDialogBase dialog);
-
         void onClickCancel(View v, SDDialogBase dialog);
+
+        void onClickConfirm(View v, SDDialogBase dialog);
     }
 }
