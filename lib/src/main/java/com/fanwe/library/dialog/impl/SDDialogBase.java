@@ -19,6 +19,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +36,8 @@ public class SDDialogBase extends Dialog implements
         View.OnClickListener,
         DialogInterface.OnDismissListener
 {
+
+    private static final Handler MAIN_HANDLER = new Handler(Looper.getMainLooper());
 
     private View mContentView;
     private boolean mDismissAfterClick = true;
@@ -219,21 +223,15 @@ public class SDDialogBase extends Dialog implements
     @Override
     public SDDialogBase startDismissRunnable(long delay)
     {
-        if (mContentView != null)
-        {
-            mContentView.removeCallbacks(mDismissRunnable);
-            mContentView.postDelayed(mDismissRunnable, delay);
-        }
+        stopDismissRunnable();
+        MAIN_HANDLER.postDelayed(mDismissRunnable, delay);
         return this;
     }
 
     @Override
     public SDDialogBase stopDismissRunnable()
     {
-        if (mContentView != null)
-        {
-            mContentView.removeCallbacks(mDismissRunnable);
-        }
+        MAIN_HANDLER.removeCallbacks(mDismissRunnable);
         return this;
     }
 
