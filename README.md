@@ -8,7 +8,7 @@ allprojects {
 }
 
 dependencies {
-        compile 'com.github.zj565061763:dialog:1.0.8'
+        compile 'com.github.zj565061763:dialog:1.0.9'
 }
 
 ```
