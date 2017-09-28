@@ -1,5 +1,17 @@
 ## Gradle
-`compile 'com.fanwe.android:dialog:1.0.7'`
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+        compile 'com.github.zj565061763:dialog:1.0.8'
+}
+
+```
 
 ## SDDialogConfirm
 ![](http://thumbsnap.com/i/zWa4uIPF.gif?0830)<br>
