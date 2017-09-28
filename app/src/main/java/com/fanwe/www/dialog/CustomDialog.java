@@ -2,7 +2,7 @@ package com.fanwe.www.dialog;
 
 import android.app.Activity;
 
-import com.fanwe.library.dialog.impl.SDDialogConfirm;
+import com.fanwe.lib.dialog.impl.SDDialogConfirm;
 
 /**
  * Created by Administrator on 2017/9/4.

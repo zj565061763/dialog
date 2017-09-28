@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.library.dialog.impl;
+package com.fanwe.lib.dialog.impl;
 
 import android.app.Activity;
 import android.text.TextUtils;
@@ -22,8 +22,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.fanwe.library.dialog.ISDDialogConfirm;
-import com.fanwe.library.dialog.R;
+import com.fanwe.lib.dialog.ISDDialogConfirm;
+import com.fanwe.lib.dialog.R;
 
 /**
  * 带标题，内容，确定按钮和取消按钮的窗口

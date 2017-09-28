@@ -5,12 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.fanwe.library.dialog.ISDDialogConfirm;
-import com.fanwe.library.dialog.ISDDialogMenu;
-import com.fanwe.library.dialog.impl.SDDialogBase;
-import com.fanwe.library.dialog.impl.SDDialogConfirm;
-import com.fanwe.library.dialog.impl.SDDialogMenu;
-import com.fanwe.library.dialog.impl.SDDialogProgress;
+import com.fanwe.lib.dialog.ISDDialogConfirm;
+import com.fanwe.lib.dialog.ISDDialogMenu;
+import com.fanwe.lib.dialog.impl.SDDialogBase;
+import com.fanwe.lib.dialog.impl.SDDialogConfirm;
+import com.fanwe.lib.dialog.impl.SDDialogMenu;
+import com.fanwe.lib.dialog.impl.SDDialogProgress;
 
 public class MainActivity extends AppCompatActivity
 {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.library.dialog.impl;
+package com.fanwe.lib.dialog.impl;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -28,8 +28,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.fanwe.library.dialog.ISDDialogBase;
-import com.fanwe.library.dialog.R;
+import com.fanwe.lib.dialog.ISDDialogBase;
+import com.fanwe.lib.dialog.R;
 
 public class SDDialogBase extends Dialog implements
         ISDDialogBase,

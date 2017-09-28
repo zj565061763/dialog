@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.library.dialog.impl;
+package com.fanwe.lib.dialog.impl;
 
 import android.app.Activity;
 import android.text.TextUtils;
@@ -21,7 +21,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.fanwe.library.dialog.R;
+import com.fanwe.lib.dialog.R;
 
 /**
  * 带环形进度条，和信息提示的窗口

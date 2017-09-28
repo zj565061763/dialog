@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.library.dialog;
+package com.fanwe.lib.dialog;
 
 import android.view.View;
 
-import com.fanwe.library.dialog.impl.SDDialogBase;
+import com.fanwe.lib.dialog.impl.SDDialogBase;
 
 public interface ISDDialogConfirm
 {
