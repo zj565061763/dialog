@@ -198,7 +198,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
             setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_right));
         } else if (tv_cancel.getVisibility() == View.VISIBLE)
         {
-            setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_single));
+            setBackgroundDrawable(tv_cancel, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_single));
         } else if (tv_confirm.getVisibility() == View.VISIBLE)
         {
             setBackgroundDrawable(tv_confirm, getContext().getResources().getDrawable(R.drawable.lib_dialog_sel_bg_button_bottom_single));
