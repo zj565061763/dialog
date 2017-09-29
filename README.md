@@ -1,20 +1,6 @@
 ## Gradle
 [![](https://jitpack.io/v/zj565061763/dialog.svg)](https://jitpack.io/#zj565061763/dialog)
 
-```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-dependencies {
-        compile 'com.github.zj565061763:dialog:1.0.10'
-}
-
-```
-
 ## SDDialogConfirm
 ![](http://thumbsnap.com/i/zWa4uIPF.gif?0830)<br>
 ```java
