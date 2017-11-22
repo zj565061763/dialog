@@ -1,17 +1,17 @@
 <resources>
 
     <style name="libDialog.Anim.SlidingBottomBottom" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">
+        <item name="android:windowEnterAnimation">
             @anim/lib_dialog_dialog_enter_sliding_from_bottom
         </item>
-        <item name="@android:windowExitAnimation">@anim/lib_dialog_dialog_exit_sliding_to_bottom
+        <item name="android:windowExitAnimation">@anim/lib_dialog_dialog_exit_sliding_to_bottom
         </item>
     </style>
 
     <style name="libDialog.Anim.SlidingTopTop" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/lib_dialog_dialog_enter_sliding_from_top
+        <item name="android:windowEnterAnimation">@anim/lib_dialog_dialog_enter_sliding_from_top
         </item>
-        <item name="@android:windowExitAnimation">@anim/lib_dialog_dialog_exit_sliding_to_top</item>
+        <item name="android:windowExitAnimation">@anim/lib_dialog_dialog_exit_sliding_to_top</item>
     </style>
 
 </resources>
