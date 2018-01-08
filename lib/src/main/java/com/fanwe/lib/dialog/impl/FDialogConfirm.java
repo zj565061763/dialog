@@ -22,13 +22,13 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.fanwe.lib.dialog.ISDDialogConfirm;
+import com.fanwe.lib.dialog.FIDialogConfirm;
 import com.fanwe.lib.dialog.R;
 
 /**
  * 带标题，内容，确定按钮和取消按钮的窗口
  */
-public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
+public class FDialogConfirm extends FDialog implements FIDialogConfirm
 {
     public TextView tv_title;
 
@@ -40,7 +40,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
 
     private Callback mCallback;
 
-    public SDDialogConfirm(Activity activity)
+    public FDialogConfirm(Activity activity)
     {
         super(activity);
         init();
@@ -49,20 +49,20 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     private void init()
     {
         setContentView(R.layout.lib_dialog_dialog_confirm);
-        tv_title = (TextView) findViewById(R.id.tv_title);
+        tv_title = findViewById(R.id.tv_title);
 
-        fl_content = (FrameLayout) findViewById(R.id.fl_content);
-        tv_content = (TextView) findViewById(R.id.tv_content);
+        fl_content = findViewById(R.id.fl_content);
+        tv_content = findViewById(R.id.tv_content);
 
-        tv_confirm = (TextView) findViewById(R.id.tv_confirm);
-        tv_cancel = (TextView) findViewById(R.id.tv_cancel);
+        tv_confirm = findViewById(R.id.tv_confirm);
+        tv_cancel = findViewById(R.id.tv_cancel);
 
         tv_confirm.setOnClickListener(this);
         tv_cancel.setOnClickListener(this);
     }
 
     @Override
-    public SDDialogConfirm setCustomView(int layoutId)
+    public FDialogConfirm setCustomView(int layoutId)
     {
         fl_content.removeAllViews();
         LayoutInflater.from(getContext()).inflate(layoutId, fl_content, true);
@@ -70,7 +70,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setCustomView(View view)
+    public FDialogConfirm setCustomView(View view)
     {
         fl_content.removeAllViews();
         fl_content.addView(view);
@@ -78,14 +78,14 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setCallback(Callback callback)
+    public FDialogConfirm setCallback(Callback callback)
     {
         mCallback = callback;
         return this;
     }
 
     @Override
-    public SDDialogConfirm setTextTitle(String text)
+    public FDialogConfirm setTextTitle(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -98,7 +98,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
         return this;
     }
 
-    public SDDialogConfirm setTextContent(String text)
+    public FDialogConfirm setTextContent(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -112,7 +112,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setTextConfirm(String text)
+    public FDialogConfirm setTextConfirm(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -127,7 +127,7 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setTextCancel(String text)
+    public FDialogConfirm setTextCancel(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -142,28 +142,28 @@ public class SDDialogConfirm extends SDDialogBase implements ISDDialogConfirm
     }
 
     @Override
-    public SDDialogConfirm setTextColorTitle(int color)
+    public FDialogConfirm setTextColorTitle(int color)
     {
         tv_title.setTextColor(color);
         return this;
     }
 
     @Override
-    public SDDialogConfirm setTextColorContent(int color)
+    public FDialogConfirm setTextColorContent(int color)
     {
         tv_content.setTextColor(color);
         return this;
     }
 
     @Override
-    public SDDialogConfirm setTextColorConfirm(int color)
+    public FDialogConfirm setTextColorConfirm(int color)
     {
         tv_confirm.setTextColor(color);
         return this;
     }
 
     @Override
-    public SDDialogConfirm setTextColorCancel(int color)
+    public FDialogConfirm setTextColorCancel(int color)
     {
         tv_cancel.setTextColor(color);
         return this;

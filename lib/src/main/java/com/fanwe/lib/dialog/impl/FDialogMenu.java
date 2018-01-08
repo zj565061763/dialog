@@ -26,7 +26,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fanwe.lib.dialog.ISDDialogMenu;
+import com.fanwe.lib.dialog.FIDialogMenu;
 import com.fanwe.lib.dialog.R;
 
 import java.util.Arrays;
@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * 带取消按钮的菜单选择窗口
  */
-public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
+public class FDialogMenu extends FDialog implements FIDialogMenu
 {
     public TextView tv_title;
     public TextView tv_cancel;
@@ -45,7 +45,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
 
     private Callback mCallback;
 
-    public SDDialogMenu(Activity activity)
+    public FDialogMenu(Activity activity)
     {
         super(activity);
         init();
@@ -63,10 +63,10 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
         setCanceledOnTouchOutside(true);
     }
 
-    //---------- ISDDialogMenu implements start ----------
+    //---------- FIDialogMenu implements start ----------
 
     @Override
-    public SDDialogMenu setTextTitle(String text)
+    public FDialogMenu setTextTitle(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -80,7 +80,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public SDDialogMenu setTextCancel(String text)
+    public FDialogMenu setTextCancel(String text)
     {
         if (TextUtils.isEmpty(text))
         {
@@ -94,14 +94,14 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public SDDialogMenu setCallback(Callback callback)
+    public FDialogMenu setCallback(Callback callback)
     {
         mCallback = callback;
         return this;
     }
 
     @Override
-    public SDDialogMenu setItems(Object... objects)
+    public FDialogMenu setItems(Object... objects)
     {
         List<Object> listObject = null;
         if (objects != null)
@@ -113,7 +113,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public SDDialogMenu setItems(List<Object> listObject)
+    public FDialogMenu setItems(List<Object> listObject)
     {
         mListModel = listObject;
         setAdapter(getAdapter());
@@ -121,7 +121,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
     }
 
     @Override
-    public SDDialogMenu setAdapter(BaseAdapter adapter)
+    public FDialogMenu setAdapter(BaseAdapter adapter)
     {
         lv_content.setAdapter(adapter);
         lv_content.setOnItemClickListener(new OnItemClickListener()
@@ -131,7 +131,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
             {
                 if (mCallback != null)
                 {
-                    mCallback.onClickItem(view, (int) id, SDDialogMenu.this);
+                    mCallback.onClickItem(view, (int) id, FDialogMenu.this);
                 }
                 dismissAfterClickIfNeed();
             }
@@ -139,7 +139,7 @@ public class SDDialogMenu extends SDDialogBase implements ISDDialogMenu
         return this;
     }
 
-    //---------- ISDDialogMenu implements end ----------
+    //---------- FIDialogMenu implements end ----------
 
     protected BaseAdapter getAdapter()
     {

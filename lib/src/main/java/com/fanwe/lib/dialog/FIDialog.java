@@ -18,7 +18,7 @@ package com.fanwe.lib.dialog;
 import android.view.View;
 import android.view.ViewGroup;
 
-public interface ISDDialogBase
+public interface FIDialog
 {
     /**
      * 返回内容View
@@ -55,7 +55,7 @@ public interface ISDDialogBase
      * @param width
      * @return
      */
-    ISDDialogBase setWidth(int width);
+    FIDialog setWidth(int width);
 
     /**
      * 设置高度
@@ -63,14 +63,14 @@ public interface ISDDialogBase
      * @param height
      * @return
      */
-    ISDDialogBase setHeight(int height);
+    FIDialog setHeight(int height);
 
     /**
      * 设置全屏
      *
      * @return
      */
-    ISDDialogBase setFullScreen();
+    FIDialog setFullScreen();
 
     /**
      * 返回默认的padding
@@ -85,7 +85,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingLeft(int padding);
+    FIDialog paddingLeft(int padding);
 
     /**
      * 设置顶部间距
@@ -93,7 +93,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingTop(int padding);
+    FIDialog paddingTop(int padding);
 
     /**
      * 设置右边间距
@@ -101,7 +101,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingRight(int padding);
+    FIDialog paddingRight(int padding);
 
     /**
      * 设置底部间距
@@ -109,7 +109,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingBottom(int padding);
+    FIDialog paddingBottom(int padding);
 
     /**
      * 设置上下左右间距
@@ -117,7 +117,7 @@ public interface ISDDialogBase
      * @param paddings
      * @return
      */
-    ISDDialogBase paddings(int paddings);
+    FIDialog paddings(int paddings);
 
     /**
      * 是否点击按钮后自动关闭窗口
@@ -132,7 +132,7 @@ public interface ISDDialogBase
      * @param dismissAfterClick
      * @return
      */
-    ISDDialogBase setDismissAfterClick(boolean dismissAfterClick);
+    FIDialog setDismissAfterClick(boolean dismissAfterClick);
 
     /**
      * 设置窗口显示的位置
@@ -140,7 +140,7 @@ public interface ISDDialogBase
      * @param gravity
      * @return
      */
-    ISDDialogBase setGrativity(int gravity);
+    FIDialog setGrativity(int gravity);
 
     /**
      * 设置窗口动画style
@@ -148,7 +148,7 @@ public interface ISDDialogBase
      * @param resId
      * @return
      */
-    ISDDialogBase setAnimations(int resId);
+    FIDialog setAnimations(int resId);
 
     /**
      * 显示顶部
@@ -171,12 +171,12 @@ public interface ISDDialogBase
      * @param delay （毫秒）
      * @return
      */
-    ISDDialogBase startDismissRunnable(long delay);
+    FIDialog startDismissRunnable(long delay);
 
     /**
      * 停止延迟关闭任务
      *
      * @return
      */
-    ISDDialogBase stopDismissRunnable();
+    FIDialog stopDismissRunnable();
 }

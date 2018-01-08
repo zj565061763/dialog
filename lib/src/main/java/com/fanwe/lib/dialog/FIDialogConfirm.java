@@ -17,9 +17,9 @@ package com.fanwe.lib.dialog;
 
 import android.view.View;
 
-import com.fanwe.lib.dialog.impl.SDDialogBase;
+import com.fanwe.lib.dialog.impl.FDialog;
 
-public interface ISDDialogConfirm
+public interface FIDialogConfirm
 {
     /**
      * 设置自定义View，替换掉中间内容部分的布局
@@ -27,7 +27,7 @@ public interface ISDDialogConfirm
      * @param layoutId
      * @return
      */
-    ISDDialogConfirm setCustomView(int layoutId);
+    FIDialogConfirm setCustomView(int layoutId);
 
     /**
      * 设置自定义View，替换掉中间内容部分的布局
@@ -35,7 +35,7 @@ public interface ISDDialogConfirm
      * @param view
      * @return
      */
-    ISDDialogConfirm setCustomView(View view);
+    FIDialogConfirm setCustomView(View view);
 
     /**
      * 设置点击回调
@@ -43,7 +43,7 @@ public interface ISDDialogConfirm
      * @param callback
      * @return
      */
-    ISDDialogConfirm setCallback(Callback callback);
+    FIDialogConfirm setCallback(Callback callback);
 
     /**
      * 设置标题文字
@@ -51,7 +51,7 @@ public interface ISDDialogConfirm
      * @param text
      * @return
      */
-    ISDDialogConfirm setTextTitle(String text);
+    FIDialogConfirm setTextTitle(String text);
 
     /**
      * 设置内容文字
@@ -59,7 +59,7 @@ public interface ISDDialogConfirm
      * @param text
      * @return
      */
-    ISDDialogConfirm setTextContent(String text);
+    FIDialogConfirm setTextContent(String text);
 
     /**
      * 设置取消按钮文字
@@ -67,7 +67,7 @@ public interface ISDDialogConfirm
      * @param text
      * @return
      */
-    ISDDialogConfirm setTextCancel(String text);
+    FIDialogConfirm setTextCancel(String text);
 
     /**
      * 设置确定按钮文字
@@ -75,7 +75,7 @@ public interface ISDDialogConfirm
      * @param text
      * @return
      */
-    ISDDialogConfirm setTextConfirm(String text);
+    FIDialogConfirm setTextConfirm(String text);
 
     /**
      * 设置标题文字颜色
@@ -83,7 +83,7 @@ public interface ISDDialogConfirm
      * @param color
      * @return
      */
-    ISDDialogConfirm setTextColorTitle(int color);
+    FIDialogConfirm setTextColorTitle(int color);
 
     /**
      * 设置内容文字颜色
@@ -91,7 +91,7 @@ public interface ISDDialogConfirm
      * @param color
      * @return
      */
-    ISDDialogConfirm setTextColorContent(int color);
+    FIDialogConfirm setTextColorContent(int color);
 
     /**
      * 设置取消文字颜色
@@ -99,7 +99,7 @@ public interface ISDDialogConfirm
      * @param color
      * @return
      */
-    ISDDialogConfirm setTextColorCancel(int color);
+    FIDialogConfirm setTextColorCancel(int color);
 
     /**
      * 设置确认文字颜色
@@ -107,12 +107,12 @@ public interface ISDDialogConfirm
      * @param color
      * @return
      */
-    ISDDialogConfirm setTextColorConfirm(int color);
+    FIDialogConfirm setTextColorConfirm(int color);
 
     interface Callback
     {
-        void onClickCancel(View v, SDDialogBase dialog);
+        void onClickCancel(View v, FDialog dialog);
 
-        void onClickConfirm(View v, SDDialogBase dialog);
+        void onClickConfirm(View v, FDialog dialog);
     }
 }

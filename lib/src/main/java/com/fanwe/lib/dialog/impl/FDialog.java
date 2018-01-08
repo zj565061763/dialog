@@ -28,11 +28,11 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.fanwe.lib.dialog.ISDDialogBase;
+import com.fanwe.lib.dialog.FIDialog;
 import com.fanwe.lib.dialog.R;
 
-public class SDDialogBase extends Dialog implements
-        ISDDialogBase,
+public class FDialog extends Dialog implements
+        FIDialog,
         View.OnClickListener,
         DialogInterface.OnDismissListener
 {
@@ -42,12 +42,12 @@ public class SDDialogBase extends Dialog implements
     private View mContentView;
     private boolean mDismissAfterClick = true;
 
-    public SDDialogBase(Activity activity)
+    public FDialog(Activity activity)
     {
         this(activity, R.style.libDialog_Dialog_Dim);
     }
 
-    public SDDialogBase(Activity activity, int theme)
+    public FDialog(Activity activity, int theme)
     {
         super(activity, theme);
 
@@ -56,7 +56,7 @@ public class SDDialogBase extends Dialog implements
         setCanceledOnTouchOutside(false);
     }
 
-    //---------- ISDDialogBase implements start----------
+    //---------- FIDialog implements start----------
 
     @Override
     public View getContentView()
@@ -87,7 +87,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase setWidth(int width)
+    public FDialog setWidth(int width)
     {
         ViewGroup.LayoutParams params = mContentView.getLayoutParams();
         params.width = width;
@@ -103,7 +103,7 @@ public class SDDialogBase extends Dialog implements
      * @param height
      * @return
      */
-    public SDDialogBase setHeight(int height)
+    public FDialog setHeight(int height)
     {
         ViewGroup.LayoutParams params = mContentView.getLayoutParams();
         params.height = height;
@@ -114,7 +114,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase setFullScreen()
+    public FDialog setFullScreen()
     {
         paddings(0);
         setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
@@ -131,7 +131,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase paddingLeft(int left)
+    public FDialog paddingLeft(int left)
     {
         View view = getWindow().getDecorView();
         view.setPadding(left, view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom());
@@ -139,7 +139,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase paddingTop(int top)
+    public FDialog paddingTop(int top)
     {
         View view = getWindow().getDecorView();
         view.setPadding(view.getPaddingLeft(), top, view.getPaddingRight(), view.getPaddingBottom());
@@ -147,7 +147,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase paddingRight(int right)
+    public FDialog paddingRight(int right)
     {
         View view = getWindow().getDecorView();
         view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), right, view.getPaddingBottom());
@@ -155,7 +155,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase paddingBottom(int bottom)
+    public FDialog paddingBottom(int bottom)
     {
         View view = getWindow().getDecorView();
         view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), bottom);
@@ -163,7 +163,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase paddings(int paddings)
+    public FDialog paddings(int paddings)
     {
         View view = getWindow().getDecorView();
         view.setPadding(paddings, paddings, paddings, paddings);
@@ -177,21 +177,21 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase setDismissAfterClick(boolean dismissAfterClick)
+    public FDialog setDismissAfterClick(boolean dismissAfterClick)
     {
         mDismissAfterClick = dismissAfterClick;
         return this;
     }
 
     @Override
-    public SDDialogBase setGrativity(int gravity)
+    public FDialog setGrativity(int gravity)
     {
         getWindow().setGravity(gravity);
         return this;
     }
 
     @Override
-    public SDDialogBase setAnimations(int resId)
+    public FDialog setAnimations(int resId)
     {
         getWindow().setWindowAnimations(resId);
         return this;
@@ -221,7 +221,7 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase startDismissRunnable(long delay)
+    public FDialog startDismissRunnable(long delay)
     {
         stopDismissRunnable();
         MAIN_HANDLER.postDelayed(mDismissRunnable, delay);
@@ -229,15 +229,15 @@ public class SDDialogBase extends Dialog implements
     }
 
     @Override
-    public SDDialogBase stopDismissRunnable()
+    public FDialog stopDismissRunnable()
     {
         MAIN_HANDLER.removeCallbacks(mDismissRunnable);
         return this;
     }
 
-    //---------- ISDDialogBase implements end----------
+    //---------- FIDialog implements end----------
 
-    private SDDialogBase setDialogView(View view, ViewGroup.LayoutParams params)
+    private FDialog setDialogView(View view, ViewGroup.LayoutParams params)
     {
         mContentView = view;
         if (params == null)

@@ -26,9 +26,9 @@ import com.fanwe.lib.dialog.R;
 /**
  * 带环形进度条，和信息提示的窗口
  */
-public class SDDialogProgress extends SDDialogBase
+public class FDialogProgress extends FDialog
 {
-    public SDDialogProgress(Activity activity)
+    public FDialogProgress(Activity activity)
     {
         super(activity);
         init();
@@ -40,11 +40,11 @@ public class SDDialogProgress extends SDDialogBase
     private void init()
     {
         setContentView(R.layout.lib_dialog_dialog_progress);
-        tv_msg = (TextView) findViewById(R.id.tv_msg);
-        pb_progress = (ProgressBar) findViewById(R.id.pb_progress);
+        tv_msg = findViewById(R.id.tv_msg);
+        pb_progress = findViewById(R.id.pb_progress);
     }
 
-    public SDDialogProgress setTextMsg(String text)
+    public FDialogProgress setTextMsg(String text)
     {
         if (TextUtils.isEmpty(text))
         {

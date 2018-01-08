@@ -5,12 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.fanwe.lib.dialog.ISDDialogConfirm;
-import com.fanwe.lib.dialog.ISDDialogMenu;
-import com.fanwe.lib.dialog.impl.SDDialogBase;
-import com.fanwe.lib.dialog.impl.SDDialogConfirm;
-import com.fanwe.lib.dialog.impl.SDDialogMenu;
-import com.fanwe.lib.dialog.impl.SDDialogProgress;
+import com.fanwe.lib.dialog.FIDialogConfirm;
+import com.fanwe.lib.dialog.FIDialogMenu;
+import com.fanwe.lib.dialog.impl.FDialog;
+import com.fanwe.lib.dialog.impl.FDialogConfirm;
+import com.fanwe.lib.dialog.impl.FDialogMenu;
+import com.fanwe.lib.dialog.impl.FDialogProgress;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -24,21 +24,21 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickOpenDialogConfirm(View view)
     {
-        SDDialogConfirm dialog = new SDDialogConfirm(this);
+        FDialogConfirm dialog = new FDialogConfirm(this);
         dialog.setTextTitle("title")
                 .setTextContent("content")
                 .setTextCancel("cancel")
                 .setTextConfirm("confirm")
-                .setCallback(new ISDDialogConfirm.Callback()
+                .setCallback(new FIDialogConfirm.Callback()
                 {
                     @Override
-                    public void onClickCancel(View v, SDDialogBase dialog)
+                    public void onClickCancel(View v, FDialog dialog)
                     {
                         Toast.makeText(getApplicationContext(), "onClickCancel", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
-                    public void onClickConfirm(View v, SDDialogBase dialog)
+                    public void onClickConfirm(View v, FDialog dialog)
                     {
                         Toast.makeText(getApplicationContext(), "onClickConfirm", Toast.LENGTH_SHORT).show();
                     }
@@ -53,19 +53,19 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickOpenDialogMenu(View view)
     {
-        SDDialogMenu dialog = new SDDialogMenu(this);
+        FDialogMenu dialog = new FDialogMenu(this);
         dialog.setTextTitle("请选择");
         dialog.setItems("LEWLY", "koukouz", "zhady", "NAPZ", "shNz", "heL^_x")
-                .setCallback(new ISDDialogMenu.Callback()
+                .setCallback(new FIDialogMenu.Callback()
                 {
                     @Override
-                    public void onClickCancel(View v, SDDialogBase dialog)
+                    public void onClickCancel(View v, FDialog dialog)
                     {
                         Toast.makeText(getApplicationContext(), "onClickCancel", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
-                    public void onClickItem(View v, int index, SDDialogBase dialog)
+                    public void onClickItem(View v, int index, FDialog dialog)
                     {
                         Toast.makeText(getApplicationContext(), "onClickItem:" + index, Toast.LENGTH_SHORT).show();
                     }
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickOpenDialogProgress(View view)
     {
-        SDDialogProgress dialog = new SDDialogProgress(this);
+        FDialogProgress dialog = new FDialogProgress(this);
 
         dialog.setCanceledOnTouchOutside(true);
         dialog.setTextMsg("加载中...").show();

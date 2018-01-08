@@ -1,24 +1,24 @@
 ## Gradle
 [![](https://jitpack.io/v/zj565061763/dialog.svg)](https://jitpack.io/#zj565061763/dialog)
 
-## SDDialogConfirm
+## FDialogConfirm
 ![](http://thumbsnap.com/i/zWa4uIPF.gif?0830)<br>
 ```java
-SDDialogConfirm dialog = new SDDialogConfirm(this);
+FDialogConfirm dialog = new FDialogConfirm(this);
 dialog.setTextTitle("title") //设置标题文字，null不显示
         .setTextContent("content") //设置内容文字
         .setTextCancel("cancel") //设置取消文字，null不显示
         .setTextConfirm("confirm") //设置确认文字，null不显示
-        .setCallback(new ISDDialogConfirm.Callback() //设置点击回调
+        .setCallback(new FIDialogConfirm.Callback() //设置点击回调
         {
             @Override
-            public void onClickCancel(View v, SDDialogBase dialog)
+            public void onClickCancel(View v, FDialog dialog)
             {
                 Toast.makeText(getApplicationContext(), "onClickCancel", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onClickConfirm(View v, SDDialogBase dialog)
+            public void onClickConfirm(View v, FDialog dialog)
             {
                 Toast.makeText(getApplicationContext(), "onClickConfirm", Toast.LENGTH_SHORT).show();
             }
@@ -27,41 +27,40 @@ dialog.setTextTitle("title") //设置标题文字，null不显示
 //  dialog.showBottom(); //显示在屏幕底部
 ```
 
-## SDDialogMenu
+## FDialogMenu
 ![](http://thumbsnap.com/i/IagAApF0.gif?0830)<br>
 ```java
-SDDialogMenu dialog = new SDDialogMenu(this);
+FDialogMenu dialog = new FDialogMenu(this);
 dialog.setItems("hel", "koukouz", "zhady") //设置要显示的内容
 //dialog.setAdapter(baseAdapter); //设置数据内容适配器
-        .setCallback(new ISDDialogMenu.Callback() //设置点击回调
+        .setCallback(new FIDialogMenu.Callback() //设置点击回调
         {
             @Override
-            public void onClickCancel(View v, SDDialogBase dialog)
+            public void onClickCancel(View v, FDialog dialog)
             {
                 Toast.makeText(getApplicationContext(), "onClickCancel", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onClickItem(View v, int index, SDDialogBase dialog)
+            public void onClickItem(View v, int index, FDialog dialog)
             {
                 Toast.makeText(getApplicationContext(), "onClickItem:" + index, Toast.LENGTH_SHORT).show();
             }
         }).showBottom(); //显示在屏幕底部
 ```
 
-## SDDialogProgress
+## FDialogProgress
 ![](http://thumbsnap.com/i/IQwIGyF7.gif?0830)<br>
 ```java
-SDDialogProgress dialog = new SDDialogProgress(this);
+FDialogProgress dialog = new FDialogProgress(this);
 
 dialog.setCanceledOnTouchOutside(true);
 dialog.setTextMsg("加载中...").show();
 ```
 
-## ISDDialogBase
-ISDDialogBase是所有的SDDialog的基类实现的接口
+## FIDialog
 ```java
-public interface ISDDialogBase
+public interface FIDialog
 {
     /**
      * 返回内容View
@@ -98,7 +97,7 @@ public interface ISDDialogBase
      * @param width
      * @return
      */
-    ISDDialogBase setWidth(int width);
+    FIDialog setWidth(int width);
 
     /**
      * 设置高度
@@ -106,14 +105,14 @@ public interface ISDDialogBase
      * @param height
      * @return
      */
-    ISDDialogBase setHeight(int height);
+    FIDialog setHeight(int height);
 
     /**
      * 设置全屏
      *
      * @return
      */
-    ISDDialogBase setFullScreen();
+    FIDialog setFullScreen();
 
     /**
      * 返回默认的padding
@@ -128,7 +127,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingLeft(int padding);
+    FIDialog paddingLeft(int padding);
 
     /**
      * 设置顶部间距
@@ -136,7 +135,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingTop(int padding);
+    FIDialog paddingTop(int padding);
 
     /**
      * 设置右边间距
@@ -144,7 +143,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingRight(int padding);
+    FIDialog paddingRight(int padding);
 
     /**
      * 设置底部间距
@@ -152,7 +151,7 @@ public interface ISDDialogBase
      * @param padding
      * @return
      */
-    ISDDialogBase paddingBottom(int padding);
+    FIDialog paddingBottom(int padding);
 
     /**
      * 设置上下左右间距
@@ -160,7 +159,7 @@ public interface ISDDialogBase
      * @param paddings
      * @return
      */
-    ISDDialogBase paddings(int paddings);
+    FIDialog paddings(int paddings);
 
     /**
      * 是否点击按钮后自动关闭窗口
@@ -175,7 +174,7 @@ public interface ISDDialogBase
      * @param dismissAfterClick
      * @return
      */
-    ISDDialogBase setDismissAfterClick(boolean dismissAfterClick);
+    FIDialog setDismissAfterClick(boolean dismissAfterClick);
 
     /**
      * 设置窗口显示的位置
@@ -183,7 +182,7 @@ public interface ISDDialogBase
      * @param gravity
      * @return
      */
-    ISDDialogBase setGrativity(int gravity);
+    FIDialog setGrativity(int gravity);
 
     /**
      * 设置窗口动画style
@@ -191,7 +190,7 @@ public interface ISDDialogBase
      * @param resId
      * @return
      */
-    ISDDialogBase setAnimations(int resId);
+    FIDialog setAnimations(int resId);
 
     /**
      * 显示顶部
@@ -214,14 +213,14 @@ public interface ISDDialogBase
      * @param delay （毫秒）
      * @return
      */
-    ISDDialogBase startDismissRunnable(long delay);
+    FIDialog startDismissRunnable(long delay);
 
     /**
      * 停止延迟关闭任务
      *
      * @return
      */
-    ISDDialogBase stopDismissRunnable();
+    FIDialog stopDismissRunnable();
 }
 
 ```
