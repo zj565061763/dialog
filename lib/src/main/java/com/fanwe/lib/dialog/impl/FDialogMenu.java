@@ -177,7 +177,7 @@ public class FDialogMenu extends FDialog implements FIDialogMenu
             {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.lib_dialog_item_dialog_menu, parent, false);
             }
-            TextView textView = (TextView) convertView.findViewById(R.id.tv_content);
+            TextView textView = convertView.findViewById(R.id.tv_content);
             Object object = getItem(position);
             if (object != null)
             {
