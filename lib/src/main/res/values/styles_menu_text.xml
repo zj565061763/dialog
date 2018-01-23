@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- menu text title -->
-    <style name="libDialog.Menu.Text.Title.Base">
-    </style>
-
-    <style name="libDialog.Menu.Text.Title" parent="libDialog.Menu.Text.Title.Base">
+    <style name="libDialog_menu_text_title">
         <item name="android:textColor">@color/lib_dialog_menu_text_title</item>
         <item name="android:textSize">@dimen/lib_dialog_menu_text_title</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <!-- menu text cancel -->
-    <style name="libDialog.Menu.Text.Cancel.Base">
-    </style>
-
-    <style name="libDialog.Menu.Text.Cancel" parent="libDialog.Menu.Text.Cancel.Base">
+    <style name="libDialog_menu_text_cancel">
         <item name="android:text">@string/lib_dialog_menu_text_cancel</item>
         <item name="android:textColor">@color/lib_dialog_menu_text_cancel</item>
         <item name="android:textSize">@dimen/lib_dialog_menu_text_cancel</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <!-- menu text item -->
-    <style name="libDialog.Menu.Text.Item.Base">
-    </style>
-
-    <style name="libDialog.Menu.Text.Item" parent="libDialog.Menu.Text.Item.Base">
+    <style name="libDialog_menu_text_item">
         <item name="android:textColor">@color/lib_dialog_menu_text_item</item>
         <item name="android:textSize">@dimen/lib_dialog_menu_text_item</item>
         <item name="android:ellipsize">end</item>

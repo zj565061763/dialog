@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/libDialog.Menu.Text.Title"
+        style="@style/libDialog_menu_text_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/lib_dialog_menu_height_title"
         android:background="@drawable/lib_dialog_bg_menu_title"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/tv_cancel"
-        style="@style/libDialog.Menu.Text.Cancel"
+        style="@style/libDialog_menu_text_cancel"
         android:layout_width="match_parent"
         android:layout_height="@dimen/lib_dialog_menu_height_cancel"
         android:layout_marginTop="@dimen/lib_dialog_menu_margin_top_cancel"

@@ -44,7 +44,7 @@ public class FDialog extends Dialog implements
 
     public FDialog(Activity activity)
     {
-        this(activity, R.style.libDialog_Dialog_Dim);
+        this(activity, R.style.libDialog_dialog_dim);
     }
 
     public FDialog(Activity activity, int theme)
@@ -201,7 +201,7 @@ public class FDialog extends Dialog implements
     public void showTop()
     {
         setGrativity(Gravity.TOP);
-        setAnimations(R.style.libDialog_Anim_SlidingTopTop);
+        setAnimations(R.style.libDialog_anim_slidingTopTop);
         show();
     }
 
@@ -216,7 +216,7 @@ public class FDialog extends Dialog implements
     public void showBottom()
     {
         setGrativity(Gravity.BOTTOM);
-        setAnimations(R.style.libDialog_Anim_SlidingBottomBottom);
+        setAnimations(R.style.libDialog_anim_slidingBottomBottom);
         show();
     }
 

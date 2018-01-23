@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="libDialog.Anim.SlidingBottomBottom" parent="android:Animation">
+    <style name="libDialog_anim_slidingBottomBottom" parent="android:Animation">
         <item name="android:windowEnterAnimation">
             @anim/lib_dialog_dialog_enter_sliding_from_bottom
         </item>
@@ -8,7 +8,7 @@
         </item>
     </style>
 
-    <style name="libDialog.Anim.SlidingTopTop" parent="android:Animation">
+    <style name="libDialog_anim_slidingTopTop" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/lib_dialog_dialog_enter_sliding_from_top
         </item>
         <item name="android:windowExitAnimation">@anim/lib_dialog_dialog_exit_sliding_to_top</item>

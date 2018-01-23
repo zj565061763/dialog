@@ -1,9 +1,9 @@
 <resources>
 
-    <style name="libDialog.Dialog.Base" parent="@android:style/Theme.DeviceDefault.Dialog">
+    <style name="libDialog_dialog_base" parent="@android:style/Theme.DeviceDefault.Dialog">
     </style>
 
-    <style name="libDialog.Dialog" parent="libDialog.Dialog.Base">
+    <style name="libDialog_dialog" parent="libDialog_dialog_base">
         <!-- 边框 -->
         <item name="android:windowFrame">@null</item>
         <!-- 是否浮现在activity之上 -->
@@ -18,7 +18,7 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="libDialog.Dialog.Dim" parent="libDialog.Dialog">
+    <style name="libDialog_dialog_dim" parent="libDialog_dialog">
         <!-- 模糊 -->
         <item name="android:backgroundDimEnabled">true</item>
     </style>

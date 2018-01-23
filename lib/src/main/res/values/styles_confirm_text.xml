@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- confirm text title -->
-    <style name="libDialog.Confirm.Text.Title.Base">
-    </style>
-
-    <style name="libDialog.Confirm.Text.Title" parent="libDialog.Confirm.Text.Title.Base">
+    <style name="libDialog_confirm_text_title" >
         <item name="android:text">@string/lib_dialog_confirm_text_title</item>
         <item name="android:textColor">@color/lib_dialog_confirm_text_title</item>
         <item name="android:textSize">@dimen/lib_dialog_confirm_text_title</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <!-- confirm text content -->
-    <style name="libDialog.Confirm.Text.Content.Base">
-    </style>
-
-    <style name="libDialog.Confirm.Text.Content" parent="libDialog.Confirm.Text.Content.Base">
+    <style name="libDialog_confirm_text_content" >
         <item name="android:textColor">@color/lib_dialog_confirm_text_content</item>
         <item name="android:textSize">@dimen/lib_dialog_confirm_text_content</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <!-- confirm text cancel -->
-    <style name="libDialog.Confirm.Text.Cancel.Base">
-    </style>
-
-    <style name="libDialog.Confirm.Text.Cancel" parent="libDialog.Confirm.Text.Cancel.Base">
+    <style name="libDialog_confirm_text_cancel" >
         <item name="android:text">@string/lib_dialog_confirm_text_cancel</item>
         <item name="android:textColor">@color/lib_dialog_confirm_text_cancel</item>
         <item name="android:gravity">center</item>
@@ -34,11 +22,7 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <!-- confirm text confirm -->
-    <style name="libDialog.Confirm.Text.Confirm.Base">
-    </style>
-
-    <style name="libDialog.Confirm.Text.Confirm" parent="libDialog.Confirm.Text.Confirm.Base">
+    <style name="libDialog_confirm_text_confirm" >
         <item name="android:textColor">@color/lib_dialog_confirm_text_confirm</item>
         <item name="android:text">@string/lib_dialog_confirm_text_confirm</item>
         <item name="android:gravity">center</item>
