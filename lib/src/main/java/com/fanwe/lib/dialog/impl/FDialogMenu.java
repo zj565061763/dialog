@@ -54,9 +54,9 @@ public class FDialogMenu extends FDialog implements FIDialogMenu
     private void init()
     {
         setContentView(R.layout.lib_dialog_dialog_menu);
-        tv_title = (TextView) findViewById(R.id.tv_title);
-        tv_cancel = (TextView) findViewById(R.id.tv_cancel);
-        lv_content = (ListView) findViewById(R.id.lv_content);
+        tv_title = findViewById(R.id.tv_title);
+        tv_cancel = findViewById(R.id.tv_cancel);
+        lv_content = findViewById(R.id.lv_content);
 
         tv_cancel.setOnClickListener(this);
         setTextTitle(null);
