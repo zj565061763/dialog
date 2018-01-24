@@ -36,11 +36,10 @@ public class FDialog extends Dialog implements
         View.OnClickListener,
         DialogInterface.OnDismissListener
 {
-
-    private static final Handler MAIN_HANDLER = new Handler(Looper.getMainLooper());
-
     private View mContentView;
     private boolean mDismissAfterClick = true;
+
+    private Handler mHandler;
 
     public FDialog(Activity activity)
     {
@@ -220,18 +219,27 @@ public class FDialog extends Dialog implements
         show();
     }
 
+    private Handler getHandler()
+    {
+        if (mHandler == null)
+        {
+            mHandler = new Handler(Looper.getMainLooper());
+        }
+        return mHandler;
+    }
+
     @Override
     public FDialog startDismissRunnable(long delay)
     {
         stopDismissRunnable();
-        MAIN_HANDLER.postDelayed(mDismissRunnable, delay);
+        getHandler().postDelayed(mDismissRunnable, delay);
         return this;
     }
 
     @Override
     public FDialog stopDismissRunnable()
     {
-        MAIN_HANDLER.removeCallbacks(mDismissRunnable);
+        getHandler().removeCallbacks(mDismissRunnable);
         return this;
     }
 
