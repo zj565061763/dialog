@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/lib_dialog_stroke"
@@ -14,7 +13,7 @@
         android:layout_height="@dimen/lib_dialog_menu_height_title"
         android:background="@drawable/lib_dialog_bg_menu_title"
         android:gravity="center"
-        android:text="标题"/>
+        android:text="标题" />
 
     <ListView
         android:id="@+id/lv_content"
@@ -23,8 +22,7 @@
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:divider="@drawable/lib_dialog_stroke"
-        android:dividerHeight="@dimen/lib_dialog_stroke">
-    </ListView>
+        android:dividerHeight="@dimen/lib_dialog_stroke"></ListView>
 
     <TextView
         android:id="@+id/tv_cancel"
@@ -33,6 +31,6 @@
         android:layout_height="@dimen/lib_dialog_menu_height_cancel"
         android:layout_marginTop="@dimen/lib_dialog_menu_margin_top_cancel"
         android:background="@drawable/lib_dialog_sel_bg_menu_item"
-        android:gravity="center"/>
+        android:gravity="center" />
 
 </LinearLayout>
