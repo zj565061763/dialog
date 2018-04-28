@@ -17,7 +17,6 @@ package com.fanwe.lib.dialog.impl;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
@@ -33,8 +32,7 @@ import com.fanwe.lib.dialog.R;
 
 public class FDialog extends Dialog implements
         FIDialog,
-        View.OnClickListener,
-        DialogInterface.OnDismissListener
+        View.OnClickListener
 {
     private View mContentView;
     private boolean mDismissAfterClick = true;
@@ -51,7 +49,6 @@ public class FDialog extends Dialog implements
         super(activity, theme);
 
         setOwnerActivity(activity);
-        setOnDismissListener(this);
         setCanceledOnTouchOutside(false);
     }
 
@@ -313,7 +310,7 @@ public class FDialog extends Dialog implements
         }
     }
 
-    private Runnable mDismissRunnable = new Runnable()
+    private final Runnable mDismissRunnable = new Runnable()
     {
         @Override
         public void run()
@@ -333,40 +330,6 @@ public class FDialog extends Dialog implements
     {
         super.onStop();
         stopDismissRunnable();
-    }
-
-    @Override
-    public void show()
-    {
-        try
-        {
-            if (getOwnerActivity() != null && !getOwnerActivity().isFinishing())
-            {
-                super.show();
-            }
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void onDismiss(DialogInterface dialog)
-    {
-
-    }
-
-    @Override
-    public void dismiss()
-    {
-        stopDismissRunnable();
-        try
-        {
-            super.dismiss();
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
     }
 
     protected static void setBackgroundDrawable(View view, Drawable drawable)
