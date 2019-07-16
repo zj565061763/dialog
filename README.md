@@ -1,3 +1,6 @@
+# Deprecated
+已废弃，功能重构并迁移到[这里](https://github.com/zj565061763/dialogview)
+
 ## Gradle
 [![](https://jitpack.io/v/zj565061763/dialog.svg)](https://jitpack.io/#zj565061763/dialog)
 
